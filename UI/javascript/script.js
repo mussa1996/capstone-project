@@ -1,0 +1,11 @@
+$(document).ready(()=>{
+    $(window).scroll(()=>{
+        if(this.scrollY>20){
+            $('.navbar').addClass("upDown");
+        }
+        else
+        {
+            $('.navbar').removeClass("upDown");
+        }
+    })
+})
