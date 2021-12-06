@@ -35,6 +35,7 @@ section{
   
 }
 .navbar{
+   z-index: 2;
    position:fixed;
    width: 100%;
    padding: 15px 0;
@@ -83,6 +84,9 @@ background:rgb(4, 150, 77);
     margin-top: -30px;
     
 }
+.signin{
+    display: none;
+}
 
 .navbar .menu li a{
     color: white;
@@ -128,9 +132,6 @@ img{
 }
 .home .max-width{
     margin: auto 0 auto 40px;
-}
-.home .home-content{
-    
 }
 
 .home .home-content .text-1{
@@ -455,12 +456,18 @@ footer{
     
       
     }
+    .sign {
+        display: none;
+    }
 }
 @media (max-width: 991px) {
     .navbar .menu-btn .fas{
         display: flex;
     
       
+    }
+    .sign {
+        display: none;
     }
     .max-width{
         padding: 0 50px;
@@ -471,6 +478,9 @@ footer{
         display: flex;
       
     }
+    .sign {
+        display: none;
+    }
     .max-width{
         max-width: 930px;
         margin: 0 auto;
@@ -480,6 +490,7 @@ footer{
         display: block;
         z-index: 999;
     }
+    
     .menu-btn i.active:before{
         content: "\f00d";
     }
@@ -553,6 +564,9 @@ footer{
     
       
     }
+    .sign {
+        display: none;
+    }
     .max-width{
         padding: 0 100px;
         font-size: 17px;
@@ -592,6 +606,9 @@ footer{
         display: flex;
     
       
+    }
+    .sign {
+        display: none;
     }
     .max-width{
         padding: 0 50px;
