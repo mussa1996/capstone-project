@@ -7,11 +7,13 @@
     <link rel="stylesheet", href="./UI/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
+   <script src="./UI/javascript/menuBar.js"></script>
 </head>
 <body>
     <!-- nav bar section -->
-    <nav class="navbar">
+   
+    <nav class="navbar" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
         <article class="max-width">
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
@@ -23,9 +25,10 @@
                 <li><a href="./UI//html/login.html" class="menu-btn signin" >Register</a></li>
                 
             </ul>
-            
             <article class="menu-btn">
+                <a href="javascript:void(0);" class="icon" onclick="openNav()">
                 <i class="fas fa-bars"></i>
+            </a>
             </article>
         </article>
         <article class="sign">
@@ -35,8 +38,10 @@
                 <a href="./UI/html/login.html" class="sign-btn">Register</a>
             </article>
         </article>
+       
         
     </nav>
+  
     <!-- home section -->
     <section class="home" id="home">
         <article class="max-width">
