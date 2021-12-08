@@ -99,8 +99,6 @@ background:rgb(4, 150, 77);
     color: blue;
 }
 
-
-
 /* home section styling */
 .home{
     display: flex;
@@ -125,7 +123,7 @@ background:rgb(4, 150, 77);
     display: inline;
     font-size: 18px;
   }
-  image{
+img{
     
    margin: 50px 50px ;
     width: 200px;
