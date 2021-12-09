@@ -8,7 +8,7 @@
      <link rel="stylesheet" href="../css/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
+  
      <title>Sign</title>
  </head>
  <body>
@@ -42,19 +42,19 @@
            <article class="signup">
                <form action="">
                    <label for="chk" aria-hidden="true" >Sign up</label>
-                     <input type="text" name="txt" placeholder="Username" required>
-                     <input type="email" name="email" placeholder="Email" required>
-                     <input type="password" name="pswd" placeholder="Password" required>
-                     <button class="">Sign up</button>
+                     <input type="text" id="username" name="txt" placeholder="Username" required>
+                     <input type="email"  id="email" name="email" placeholder="Email" required>
+                     <input type="password" id="password" name="pswd" placeholder="Password" required>
+                     <button onClick="validateSignup()">Sign up</button>
                </form>
            </article>
            <article class="login"> 
                <form action="">
                    <label for="chk" aria-hidden="true">Login</label>
-                   <input type="email" name="email" placeholder="Email" required>
-                     <input type="password" name="pswd" placeholder="Password" required>
+                   <input type="email"  id="email" name="email" placeholder="Email" required>
+                     <input type="password" id="password" name="pswd" placeholder="Password" required>
 
-                        <button class="">Login</button>
+                        <button  onClick="validateLogin()">Login</button>
 
                </form>
            </article>
@@ -141,6 +141,6 @@
             </article>
         </article>
 
-    <script src="../javascript/script.js"></script>
+        <script src="../javascript/validation-form.js"></script>
  </body>
  </html>
