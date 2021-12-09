@@ -159,13 +159,19 @@ header {
     }
 }
 @media (max-width: 768px) {
-    .blog-content .blog-item{
-        width: 100%;
+    .blog-content{
+        margin: 2rem 0;
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 @media (max-width: 576px) {
-    .blog-content .blog-item{
-        width: 100%;
+    .blog-content{
+        margin: 2rem 0;
+      display: grid;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 @media (max-width: 480px) {
