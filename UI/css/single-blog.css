@@ -61,6 +61,16 @@ img {
     border: none;
     width: 50%;
     border: 1px solid var(--color-grey);
+   
+  }
+  .article .comment-color input{
+    height: 50px;
+    margin: 20px 0;
+    border: none;
+    width: 50%;
+    border: 1px solid var(--color-grey);
+    color:#fff;
+    background: #04964D;
   }
   .article .add-comment input:focus {
     outline: none;
