@@ -98,6 +98,9 @@ background:rgb(4, 150, 77);
 .navbar .menu li a:hover{
     color: blue;
 }
+.menu-bar{
+    display: none;
+}
 
 /* home section styling */
 .home{
@@ -123,7 +126,7 @@ background:rgb(4, 150, 77);
     display: inline;
     font-size: 18px;
   }
-img{
+ .image{
     
    margin: 50px 50px ;
     width: 200px;
@@ -443,6 +446,9 @@ footer{
     text-align: center;
     
 }
+.active{
+    transform: translateX(0%) !important;
+}
 
 /* responsiviness styling */
 
@@ -456,6 +462,10 @@ footer{
     
       
     }
+    .menu-bar{
+        display: flex;
+        
+    }
     .sign {
         display: none;
     }
@@ -466,6 +476,9 @@ footer{
     
       
     }
+    .menu-bar {
+        display: flex;
+    }
     .sign {
         display: none;
     }
@@ -474,17 +487,40 @@ footer{
     }
 }
 @media (max-width: 947px){
-    .navbar .menu-btns{
+    .navbar .menu-btns .fas{
         display: flex;
       
+    }
+    .menu-bar{
+        display: flex;
     }
     .sign {
         display: none;
     }
-    .max-width{
+    /* .max-width{
         max-width: 930px;
         margin: 0 auto;
         padding: 0 50px;
+    } */
+    .nav-link ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-link ul li{
+        text-align: center;
+    }
+    .nav-link{
+        position: absolute;
+        right: 0px;
+        height:100vh;
+        top: 4.5vh;
+        /* background-color: #0f0e0e; */
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-link li{
+        opacity: 1;
     }
     .menu-btn{
         display: block;
@@ -564,6 +600,9 @@ footer{
     
       
     }
+    .menu-bar{
+        display: flex;
+    }
     .sign {
         display: none;
     }
@@ -606,6 +645,9 @@ footer{
         display: flex;
     
       
+    }
+    .menu-bar{
+        display: flex;
     }
     .sign {
         display: none;
