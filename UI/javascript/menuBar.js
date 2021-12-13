@@ -1,15 +1,10 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
+
+
+const userList = document.querySelector(".menu-btn");
+const nav= document.querySelector(".max-width");
+console.log(userList);
+userList.addEventListener('click', userList);
+function test(){
+  console.log('hey');
+}
+

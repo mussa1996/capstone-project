@@ -1,20 +1,22 @@
+ <!DOCTYPE html>
  <html lang="en">
  <head>
      
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width= , initial-scale=1.0">
+     <meta name="viewport" content="width=device-width , initial-scale=1.0">
      <link rel="stylesheet" href="../css/sign.css">
      <link rel="stylesheet" href="../css/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <script defer src="../javascript/validation-form.js"></script>
+    <script src="../javascript/menuBar.js"></script>
      <title>Sign</title>
  </head>
  <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <article class="max-width">
-            <ul class="menu">
+            <ul class="menu" >
                 <li><a href="/index.html "class="menu-btn">Home</a></li>
                 <li><a href="/index.html" class="menu-btn">About</a></li>
                 <li><a href="/index.html" class="menu-btn">Services</a></li>
@@ -23,8 +25,8 @@
                 <li><a href="/index.html" class="menu-btn">Contact</a></li>
             </ul>
             
-            <article class="menu-btn">
-                <i class="fas fa-bars"></i>
+            <article class="menu-btn" >
+                <i class="fas fa-bars" ></i>
             </article>
         </article>
         <article class="sign">
@@ -39,22 +41,50 @@
      <section class="log-section">  
      <article class="main">
            <input type="checkbox"  id="chk" aria-hidden="true">
+    
            <article class="signup">
-               <form action="">
+            
+               <form id="form" action="/" method="get">
                    <label for="chk" aria-hidden="true" >Sign up</label>
-                     <input type="text" id="username" name="txt" placeholder="Username" required>
-                     <input type="email"  id="email" name="email" placeholder="Email" required>
-                     <input type="password" id="password" name="pswd" placeholder="Password" required>
-                     <button onClick="validateSignup()">Sign up</button>
+                    
+                    <article>
+                        <p id="error"></p>
+                        <input type="text" id="username" name="txt" placeholder="Username"  > 
+                    </article>
+                    <article>
+                        <p id="error"></p>
+                       
+                    </article>
+                     
+                     <article>
+                        <p id="error"></p>
+                        <input type="email"  id="email" name="email" placeholder="Email"  > 
+                    </article>
+                     
+                     
+                     <article>
+                        <p id="error"></p>
+                        <input type="password" id="password" name="pswd" placeholder="Password" >
+                    </article>
+                     
+                     
+                     <button type="submit">Sign up</button>
                </form>
            </article>
            <article class="login"> 
-               <form action="">
+               <form action="" id="form1">
                    <label for="chk" aria-hidden="true">Login</label>
-                   <input type="email"  id="email" name="email" placeholder="Email" required>
-                     <input type="password" id="password" name="pswd" placeholder="Password" required>
+                   <article >
+                       <p id="error-login"></p>
+                    <input type="email"  id="email" name="email" placeholder="Email" >
+                   </article>
+                   <article >
+                    <p id="error-login"></p>
+                    <input type="password" id="password" name="pswd" placeholder="Password" >
+                   </article>
+                     
 
-                        <button  onClick="validateLogin()">Login</button>
+                        <button type="submit">Login</button>
 
                </form>
            </article>
@@ -140,7 +170,7 @@
                 </article>
             </article>
         </article>
-
-        <script src="../javascript/validation-form.js"></script>
+       
+       
  </body>
  </html>
