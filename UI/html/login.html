@@ -46,25 +46,20 @@
             
                <form id="form" action="/" method="get">
                    <label for="chk" aria-hidden="true" >Sign up</label>
-                    
+                   <p id="error" style="color: red;"></p>
                     <article>
-                        <p id="error"></p>
-                        <input type="text" id="username" name="txt" placeholder="Username"  > 
+                        <p id="username-error" style="color: red; padding-left:65px"></p>
+                        <input type="text" id="username" name="txt" placeholder="Username"  >  
                     </article>
-                    <article>
-                        <p id="error"></p>
-                       
-                    </article>
-                     
                      <article>
-                        <p id="error"></p>
+                        <p id="email-error" style="color: red; padding-left:65px"></p>
                         <input type="email"  id="email" name="email" placeholder="Email"  > 
                     </article>
                      
                      
                      <article>
-                        <p id="error"></p>
-                        <input type="password" id="password" name="pswd" placeholder="Password" >
+                        <p id="password-error" style="color: red; padding-left:65px"></p>
+                        <input type="password" id="password" name="pswd" placeholder="Password" > 
                     </article>
                      
                      
