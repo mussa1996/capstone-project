@@ -10,6 +10,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
     <script defer src="../javascript/validation-form.js"></script>
+    <script defer src="../javascript/sign.js"></script>
     <script src="../javascript/menuBar.js"></script>
      <title>Sign</title>
  </head>
@@ -46,19 +47,22 @@
             
                <form id="form" action="/" method="get">
                    <label for="chk" aria-hidden="true" >Sign up</label>
-                   <p id="error" style="color: red;"></p>
+                 
                     <article>
-                        <p id="username-error" style="color: red; padding-left:65px"></p>
+                        <div class="error" style="color: red; padding-left:65px"></div>
+                        <!-- <p id="username-error" style="color: red; padding-left:65px"></p> -->
                         <input type="text" id="username" name="txt" placeholder="Username"  >  
                     </article>
                      <article>
-                        <p id="email-error" style="color: red; padding-left:65px"></p>
+                        <div class="error" style="color: red; padding-left:65px"></div>
+                        <!-- <p id="email-error" style="color: red; padding-left:65px"></p> -->
                         <input type="email"  id="email" name="email" placeholder="Email"  > 
                     </article>
                      
                      
                      <article>
-                        <p id="password-error" style="color: red; padding-left:65px"></p>
+                        <div class="error" style="color: red; padding-left:65px"></div>
+                        <!-- <p id="password-error" style="color: red; padding-left:65px"></p> -->
                         <input type="password" id="password" name="pswd" placeholder="Password" > 
                     </article>
                      
@@ -67,18 +71,17 @@
                </form>
            </article>
            <article class="login"> 
-               <form action="" id="form1">
+               <form  id="form1" action="/" method="get">
                    <label for="chk" aria-hidden="true">Login</label>
                    <article >
-                       <p id="error-login"></p>
-                    <input type="email"  id="email" name="email" placeholder="Email" >
+                    <div class="error-login" style="color: red; padding-left:65px"></div>
+                    <input type="email"  id="email-login" name="email" placeholder="Email" >
                    </article>
                    <article >
-                    <p id="error-login"></p>
-                    <input type="password" id="password" name="pswd" placeholder="Password" >
+                    <div class="error-login" style="color: red; padding-left:65px"></div>
+                    <input type="password" id="password-login" name="pswd" placeholder="Password" >
                    </article>
                      
-
                         <button type="submit">Login</button>
 
                </form>
