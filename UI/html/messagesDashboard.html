@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/dashboard.css">
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <div class="menu-links">
+        <a href="index.html" >Home</a>
+    <a href="index.html#about-me">About</a>
+    <a href="contact.html" >Contact</a>
+    <a href="blog.html">Blog</a>
+     
+    </div>
+    <div  id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="../index.html" >Home</a>
+          <a href="#about-me">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog">Blog</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+</div>
+
+<div class="main dashboard">
+  <section class="view-articles" id="view-art">
+    <h2>Messages</h2>
+
+    <div class="events-btn">
+      <div>
+        <a href="add-article.html"><input type="button" value="Add article" class="articles-btn" ></a>
+      </div>
+     <div>
+      <a href="dashboard.html"><input type="button" value="View articles" class="articles-btn "></a>
+     </div>
+     <div>
+      <a href=""><input type="button" value="Messages" class="articles-btn active"></a>
+     </div>
+     
+    </div>
+    <table id="articles-dash">
+      
+      <tr >
+        <ul id="messages"></ul>
+      </tr>
+   
+      <div class="singleMessage">
+         <div class="theMessage">
+          <button class="accordion" id="FullName"></button>
+          <div class="panel">
+           <p id="accEmail"></p>
+           <p id="accMessage"></p>
+        </div> 
+       
+    </div>
+    </div>
+        
+      
+      
+     
+    </table>
+  </section>
+ 
+</div>  
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyA5DqS37CxCsVTe4irBFN97DL29F8cZPPg",
+    authDomain: "capstone-project-b846a.firebaseapp.com",
+    databaseURL: "https://capstone-project-b846a.firebaseio.com",
+    projectId: "capstone-project-b846a",
+    storageBucket: "capstone-project-b846a.appspot.com",
+    messagingSenderId: "770713433981",
+    appId: "1:770713433981:web:83d1a849d35ee817f83e14",
+    measurementId: "G-QS3ECVY943"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots:true});
+</script>
+<script src="../js/readMessages.js"></script>
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+</body>
+</html> 
