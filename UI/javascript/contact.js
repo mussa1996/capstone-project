@@ -5,7 +5,7 @@ form.addEventListener('submit', (e)=>{
         e.preventDefault();
        
           db.collection('messages').add({
-            fullName: form.fullName.value,
+            usename: form.username.value,
             email: form.email.value,
             message: form.message.value
         }).then(function(){
