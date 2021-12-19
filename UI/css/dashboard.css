@@ -11,7 +11,7 @@ body {
    
   /* top nav */
   .topnav {
-    background-color: #90b8ac;
+    background-color:rgb(4, 150, 77);;
     overflow: hidden;
    position: relative;
    margin-right: 105px;
@@ -38,7 +38,7 @@ body {
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
-    background-color: #2e9244;
+    background-color: #1a2297;
     color: white;
   }
   
