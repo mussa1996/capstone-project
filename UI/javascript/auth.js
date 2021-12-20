@@ -15,31 +15,29 @@ signupForm.addEventListener('submit', (e) => {
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     console.log(cred.user);
     console.log("hey user")
-    // close the signup modal & reset form
-    // const modal = document.querySelector('#modal-signup');
-    // M.Modal.getInstance(modal).close();
-    window.location.href="dashboard.html";
+    window.location.href="login.html#form1";
     signupForm.reset();
   });
 });
-// const firebase =require('./init-firebase')
 
-// const signup=document.getElementById("form");
-// const signupFunction=()=>{
-//   const username=document.getElementById("username");
-//   const email=document.getElementById("email");
-//   const password=document.getElementById("password");
-//   firebase.auth.createUserWithEmailAndPassword(username,email,password)
-//   .then(()=>{
-//     console.log("signup successfully")
-//   })
-//   .catch(err=>{
-//     console.error(err);
-//   })
-// }
+// signin after to signup
+const signinForm = document.querySelector('#form1');
+signinForm.addEventListener('submit', (e) => {
+  e.preventDefault();
 
+  // get user info
+  const email = signinForm['email'].value;
+  const password = signinForm['password'].value;
 
-// signup.addEventListener('submit',signupFunction);
+  // sign in the user
+  auth.signInWithEmailAndPassword(email, password).then(cred => {
+
+    console.log(cred.user);
+    console.log("hey user")
+    window.location.href="dashboard.html";
+    signinForm.reset();
+  });
+});
 
 
  

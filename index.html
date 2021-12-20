@@ -162,17 +162,17 @@
                     <form action="#" id="myContactForm">
                         <article class="fields">
                             <article class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" id="name" required>
                             </article>
                             <article class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" id="email" required>
                             </article>
                         </article>
                         <article class="field">
                             <input type="text" placeholder="Subject" required>
                         </article>
                         <article class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.." id="message" required></textarea>
                         </article>
                         <article class="button-area">
                             <button type="submit">Send message</button>
@@ -191,12 +191,12 @@
                 </article>
             </article>
         </article>
-        <script>
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        <!-- <script>
+            const ref =new Firebase("https://capstone-project-7f578-default-rtdb.firebaseio.com");
             const firebaseConfig = {
               apiKey: "AIzaSyBZRUa2SA5tgZKtfE9wi2ribWrX76nEu60",
               authDomain: "capstone-project-7f578.firebaseapp.com",
+              databaseURL: "https://capstone-project-7f578-default-rtdb.firebaseio.com",
               projectId: "capstone-project-7f578",
               storageBucket: "capstone-project-7f578.appspot.com",
               messagingSenderId: "913886745605",
@@ -208,12 +208,13 @@
             const db = firebase.firestore();
             console.log("initialize firebase")
             db.settings({timestampsInSnapshot:true});
-          </script>
-          <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+          </script> -->
+          <script defer src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+          <script defer src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+          <script defer src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+          <!-- <script defer src="./UI/javascript/init-firebase.js"></script> -->
           
-          <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+          <script defer src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
           <script defer src="./UI/javascript/contact.js"></script>
 </body>
 </html>
