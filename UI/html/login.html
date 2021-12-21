@@ -48,56 +48,53 @@
         
     </nav>
     <section class="log-section">  
-    <article class="main">
-          <input type="checkbox"  id="chk" aria-hidden="true">
-   
-          <article class="signup">
-           
-              <form id="form" action="/" method="get">
-                  <label for="chk" aria-hidden="true" >Sign up</label>
-                   
-                   <article>
-                       <p id="error"></p>
-                       <input type="text" id="username" name="txt" placeholder="Username"  > 
-                   </article>
-                   <article>
-                       <p id="error"></p>
+        <article class="main">
+            <input type="checkbox"  id="chk" aria-hidden="true">
+     
+            <article class="signup">
+             
+                <form id="form" action="/" method="get">
+                    <label for="chk" aria-hidden="true" >Sign up</label>
+                  
+                     <article>
+                         <div class="error" style="color: red; padding-left:65px"></div>
+                         <!-- <p id="username-error" style="color: red; padding-left:65px"></p> -->
+                         <input type="text" id="username" name="txt" placeholder="Username"  >  
+                     </article>
+                      <article>
+                         <div class="error" style="color: red; padding-left:65px"></div>
+                         <!-- <p id="email-error" style="color: red; padding-left:65px"></p> -->
+                         <input type="email"  id="email" name="email" placeholder="Email"  > 
+                     </article>
                       
-                   </article>
-                    
-                    <article>
-                       <p id="error"></p>
-                       <input type="email"  id="email" name="email" placeholder="Email"  > 
-                   </article>
-                    
-                    
-                    <article>
-                       <p id="error"></p>
-                       <input type="password" id="password" name="pswd" placeholder="Password" >
-                   </article>
-                    
-                    
-                    <button type="submit">Sign up</button>
-              </form>
-          </article>
-          <article class="login"> 
-              <form action="" id="form1">
-                  <label for="chk" aria-hidden="true">Login</label>
-                  <article >
-                      <p id="error-login"></p>
-                   <input type="email"  id="email" name="email" placeholder="Email" >
-                  </article>
-                  <article >
-                   <p id="error-login"></p>
-                   <input type="password" id="password" name="pswd" placeholder="Password" >
-                  </article>
-                    
-
-                       <button type="submit">Login</button>
-
-              </form>
-          </article>
-    </article>
+                      
+                      <article>
+                         <div class="error" style="color: red; padding-left:65px"></div>
+                         <!-- <p id="password-error" style="color: red; padding-left:65px"></p> -->
+                         <input type="password" id="password" name="pswd" placeholder="Password" > 
+                     </article>
+                      
+                      
+                      <button type="submit">Sign up</button>
+                </form>
+            </article>
+            <article class="login"> 
+                <form  id="form1" action="/" method="get">
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <article >
+                     <div class="error-login" style="color: red; padding-left:65px"></div>
+                     <input type="email"  id="email-login" name="email" placeholder="Email" >
+                    </article>
+                    <article >
+                     <div class="error-login" style="color: red; padding-left:65px"></div>
+                     <input type="password" id="password-login" name="pswd" placeholder="Password" >
+                    </article>
+                      
+                         <button type="submit">Login</button>
+ 
+                </form>
+            </article>
+      </article>
    </section>
      <!-- contact section -->
     <section class="contact" id="contact">

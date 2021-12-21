@@ -7,13 +7,9 @@ form.addEventListener('submit', (e)=>{
         const email=document.getElementById("email").value;
         const message=document.getElementById("message").value;
           db.collection('messages').add({
-            name,
-        email,
-        message,
-            // name: form.name,
-            // email: form.email,
-            // message: form.message,
-
+            usename: form.username.value,
+            email: form.email.value,
+            message: form.message.value
         }).then(function(){
             alert('Message sent..');
             form.reset();
