@@ -1,9 +1,4 @@
-
-// let form = document.querySelector('#myContactForm')
-
-
 let form = document.querySelector('#myContactForm')
-
 form.addEventListener('submit', (e)=>{
         e.preventDefault();
        const name=document.getElementById("name").value;
