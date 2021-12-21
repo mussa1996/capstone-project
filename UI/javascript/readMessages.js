@@ -9,15 +9,16 @@ db.collection('messages').get().then((snapshot)=>{
 
 function renderMessage(doc){
   
-    let fullName = document.querySelector('#FullName');
+    let fullName = document.querySelector('#name');
     let message = document.querySelector('#accMessage');
     let panel = document.querySelector('.panel');
     let div = document.querySelector('.theMessage');
     const div2 = document.createElement('div')
     div.setAttribute('message-id', doc.id);
-   
-    fullName.textContent ='Name: '+doc.data().fullName;
-    message.textContent = doc.data().message;
+    console.log(fullName)
+   console.log(doc.data());
+    fullName.textContent ='Name: '+doc.data().name;
+    message.textContent = 'Message:'+doc.data().message;
     
     
     div.appendChild(fullName);
