@@ -26,8 +26,8 @@ signinForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // get user info
-  const email = signinForm['email'].value;
-  const password = signinForm['password'].value;
+  const email = signinForm['email-login'].value;
+  const password = signinForm['password-login'].value;
 
   // sign in the user
   auth.signInWithEmailAndPassword(email, password).then(cred => {
