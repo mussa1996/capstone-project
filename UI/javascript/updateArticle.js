@@ -41,7 +41,15 @@ if (file===null){
             title: form.title.value,
             picture: doc(id).get().picture
     }).then(function(){
-        alert('updated successfully')
+        // alert('updated successfully')
+        Toastify({
+            text: "Good job.. updated successfully",
+            className: "info",
+            style: {
+              background: "linear-gradient(to right, #b02400, #b03000)",
+            }
+            
+          }).showToast();
         window.location.href = "dashboard.html";
     })
 
@@ -93,7 +101,15 @@ function uploadImage(){
                    summary: form.summary.value,
                    title: form.title.value,
            }).then(function(){
-               alert('updated successfully')
+            //    alert('updated successfully')
+            Toastify({
+                text: "Good job.. updated successfully",
+                className: "info",
+                style: {
+                  background: "linear-gradient(to right, #b02400, #b03000)",
+                }
+                
+              }).showToast();
                window.location.href = "dashboard.html";
            })
             db.collection('articles').doc(id).update({
@@ -102,12 +118,28 @@ function uploadImage(){
                 summary: form.summary.value,
                 title: form.title.value
             }).then(function(){
-                alert('Successfuly updated!');
+                // alert('Successfuly updated!');
+                Toastify({
+                    text: "Good job.. updated successfully",
+                    className: "info",
+                    style: {
+                      background: "linear-gradient(to right, #b02400, #b03000)",
+                    }
+                    
+                  }).showToast();
                 form.reset();
                 window.location.href = "dashboard.html";
             })
             .catch(function(error) {
-                alert('Error uploading post, Try again!');
+                // alert('Error uploading post, Try again!');
+                Toastify({
+                    text: "Error uploading post, Try again!",
+                    className: "info",
+                    style: {
+                      background: "linear-gradient(to right, #b02400, #b03000)",
+                    }
+                    
+                  }).showToast();
             });
         
         });
