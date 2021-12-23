@@ -1,5 +1,4 @@
 
-// console.log(auth)
 // signup
 
 const signupForm = document.querySelector('#form');
@@ -28,15 +27,47 @@ signinForm.addEventListener('submit', (e) => {
   // get user info
   const email = signinForm['email-login'].value;
   const password = signinForm['password-login'].value;
+  
+ 
 
   // sign in the user
   auth.signInWithEmailAndPassword(email, password).then(cred => {
-
-    console.log(cred.user);
-    console.log("hey user")
+   if(email=="niyodusengamussa@gmail.com"){
+  
+    Toastify({
+      text: "Login success.. Welcome Admin",
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #b02400, #b03000)",
+      }
+      
+    }).showToast();
     window.location.href="dashboard.html";
+    
+    }
+    else{
+    window.location.href="blogs-new.html";
+    }
     signinForm.reset();
-  });
+  }).catch(error => {
+        
+    switch (error.code) {
+       case 'auth/user-not-found':
+        document.querySelector('#error').textContent='user not found';
+         break;
+       case 'auth/invalid-email':
+        document.querySelector('#error-login').textContent='invalid email';
+         break;
+     
+       case 'auth/weak-password':
+        document.querySelector('#error-login').textContent='weak password';
+         break;
+       default:
+        document.querySelector('#error').textContent ='password and email are incorrect';
+         break;
+     }
+ });
+
 });
 
 

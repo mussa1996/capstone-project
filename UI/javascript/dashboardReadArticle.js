@@ -1,5 +1,4 @@
-// import {auth, db} from './init-firebase'
-// const authe=db.auth();
+
 const firebaseConfig = {
   apiKey: "AIzaSyBZRUa2SA5tgZKtfE9wi2ribWrX76nEu60",
   authDomain: "capstone-project-7f578.firebaseapp.com",
@@ -44,11 +43,19 @@ function renderArticle(doc){
     action1.addEventListener('click', (e)=>{
         e.stopPropagation();
         let id=e.target.parentElement.getAttribute('article-id');
-            if(confirm('are you sure you want to delete this article?')){
+            // if(confirm('are you sure you want to delete this article?'
+            // )){
                 db.collection('articles').doc(id).delete().then(()=>{
-                    alert('article deleted successful')
+                    // alert('article deleted successful')
+                    Toastify({
+                      text: "Article deleted successful",
+                      className: "info",
+                      style: {
+                        background: "linear-gradient(to right, #b02400, #b03000)",
+                      }
+                    }).showToast();
                 }); 
-            } 
+            
             
     })
 
