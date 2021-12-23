@@ -14,6 +14,14 @@ signupForm.addEventListener('submit', (e) => {
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     console.log(cred.user);
     console.log("hey user")
+    Toastify({
+      text: "Signup success.. Welcome to login page",
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #b02400, #b03000)",
+      }
+      
+    }).showToast();
     window.location.href="login.html#form1";
     signupForm.reset();
   });
@@ -46,6 +54,14 @@ signinForm.addEventListener('submit', (e) => {
     
     }
     else{
+      Toastify({
+        text: "Login success.. Welcome blog page",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #b02400, #b03000)",
+        }
+        
+      }).showToast();
     window.location.href="blogs-new.html";
     }
     signinForm.reset();
