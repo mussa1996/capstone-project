@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/sign.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
 <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -17,6 +18,7 @@
    <script defer src="../javascript/validation-form.js"></script>
    <script defer src="../javascript/menuBar.js"></script>
     <!-- <script defer src="../javascript/init-firebase.js"></script> -->
+    <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script defer src="../javascript/auth.js"></script>
 
 
@@ -81,6 +83,7 @@
             <article class="login"> 
                 <form  id="form1" action="/" method="get">
                     <label for="chk" aria-hidden="true">Login</label>
+                    <p id="error" style="color: red; padding-left:65px"></p>
                     <article >
                      <div class="error-login" style="color: red; padding-left:65px"></div>
                      <input type="email"  id="email-login" name="email" placeholder="Email" >

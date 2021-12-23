@@ -32,12 +32,26 @@ form.addEventListener('submit', (e)=>{
                 summary: form.summary.value,
                 title: form.title.value
             }).then(function(){
-                alert('Successfuly uploaded!');
+                // alert('Successfuly uploaded!');
+                Toastify({
+                    text: "Successfuly uploaded!",
+                    className: "info",
+                    style: {
+                        background: "linear-gradient(to right, #b02400, #b03000)",
+                    }
+                }).showToast();
                 form.reset();
-                window.location.href = "dashboard.html";
+                // window.location.href = "dashboard.html";
             })
             .catch(function(error) {
-                alert('Error uploading post, Try again!');
+                // alert('Error uploading post, Try again!');
+                Toastify({
+                    text: "Error uploading post, Try again!",
+                    className: "info",
+                    style: {
+                      background: "linear-gradient(to right, #b02400, #b03000)",
+                    }
+                  }).showToast();
             });
              
         });

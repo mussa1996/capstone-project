@@ -6,6 +6,7 @@
     <title>Personal Portofio Website </title>
     <link rel="stylesheet", href="./UI/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script defer src="./UI/javascript/menuBar.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
@@ -13,6 +14,7 @@
           <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
           
           <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
     <!-- nav bar section -->
@@ -179,7 +181,7 @@
                             <textarea cols="30" rows="10" placeholder="Message.." id="message" required></textarea>
                         </article>
                         <article class="button-area">
-                            <button type="submit">Send message</button>
+                            <button id="submit" type="submit">Send message</button>
                         </article>
                     </form>
                 </article>
@@ -215,5 +217,6 @@
           </script>
           
           <script defer src="./UI/javascript/contact.js"></script>
+          <!-- <script src="./UI/javascript/display-message.js"></script> -->
 </body>
 </html>

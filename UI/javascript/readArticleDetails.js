@@ -16,28 +16,6 @@ db.collection('articles').doc(id).get().then((article)=>{
     renderArticle(article.data());
 }) 
 
-
-// const form=document.querySelector('#addArticle');
-// form.addEventListener('submit', (e) =>{
-//     e.preventDefault();
-//     db.collection('articles').doc(id).update({
-        
-//              content: form.content.value,
-//             picture:'',
-//             summary: form.summary.value,
-//             title: form.title.value
-//     })
-
-//     document.querySelector('[name= title]').value=' ';
-//     document.querySelector('[name= content]').value=' ';
-
-//     setTimeout(()=>{
-//         window.location.href='add-article.html';
-//     },1500)
-// })
-
-
-
 //comments of the blog post
 
 const form = document.querySelector('#commentForm');
@@ -76,36 +54,17 @@ form.addEventListener('submit', (e)=>{
             div.appendChild(comment)
             div.appendChild(hr)
         }
-        
-        
+
+       
+      window.onload=function(){
         db.collection('comments').get().then((snapshot)=>{
-            
             snapshot.docs.forEach(doc=>{
                 if(doc.data().commentId == id){
                     renderComments(doc);
                 }
              
             })
+            
         })
-
-
-// const form=document.querySelector('#addArticle');
-// form.addEventListener('submit', (e) =>{
-//     e.preventDefault();
-//     db.collection('articles').doc(id).update({
-        
-//              content: form.content.value,
-//             picture:'',
-//             summary: form.summary.value,
-//             title: form.title.value
-//     })
-
-//     document.querySelector('[name= title]').value=' ';
-//     document.querySelector('[name= content]').value=' ';
-
-//     setTimeout(()=>{
-//         window.location.href='add-article.html';
-//     },1500)
-// })
-
+      }
 

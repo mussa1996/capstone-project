@@ -9,7 +9,14 @@ form.addEventListener('submit', (e)=>{
              email,
              message,
         }).then(function(){
-            alert('Message sent..');
+            // alert('Message sent..');
+            Toastify({
+              text: "Message sent..",
+              className: "info",
+              style: {
+                background: "linear-gradient(to right, #b02400, #b03000)",
+              }
+            }).showToast();
             form.reset();
         })
         
