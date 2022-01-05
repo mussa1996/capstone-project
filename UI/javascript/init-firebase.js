@@ -15,5 +15,3 @@ var firebaseConfig = {
   const db=app.database();
 
 db.settings({timestampsInSnapshots:true});
-
-
