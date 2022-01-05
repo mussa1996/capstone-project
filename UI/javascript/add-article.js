@@ -1,3 +1,25 @@
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBZRUa2SA5tgZKtfE9wi2ribWrX76nEu60",
+  authDomain: "capstone-project-7f578.firebaseapp.com",
+  projectId: "capstone-project-7f578",
+  storageBucket: "capstone-project-7f578.appspot.com",
+  messagingSenderId: "913886745605",
+  appId: "1:913886745605:web:a7ac1dc1fc74f72e27b86c"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  console.log("initialize firebase")
+  db.settings({timestampsInSnapshot:true});
+const auth=firebase.auth();
+  
+auth.onAuthStateChanged(user=>{
+    if(!user){
+      window.location.href="login.html";
+    }
+  })
 const form = document.querySelector('#addArticle');
 form.addEventListener('submit', (e)=>{
   e.preventDefault();
@@ -59,3 +81,13 @@ form.addEventListener('submit', (e)=>{
     });   
 };
 
+const logout = document.querySelector('#logout');
+  if(logout){
+    logout.addEventListener('click', (e)=>{
+      e.preventDefault()
+      console.log('logout clicked')
+      auth.signOut().then(()=>{
+        window.location.href="login.html";
+      })
+  })
+  }
